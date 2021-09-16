@@ -1,0 +1,22 @@
+{
+  "name": "revision-launchpad-sept2021",
+  "version": "1.0.0",
+  "description": "revision-launchpad-sept2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/missKatiaPunter/revision-launchpad-sept2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/missKatiaPunter/revision-launchpad-sept2021/issues"
+  },
+  "homepage": "https://github.com/missKatiaPunter/revision-launchpad-sept2021#readme",
+  "dependencies": {
+    "jest": "^27.2.0"
+  }
+}
