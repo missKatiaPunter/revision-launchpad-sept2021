@@ -3,7 +3,9 @@
 const {
     subtract,
     divide,
-    isDivisibleBy
+    isDivisibleBy,
+    gradeAssignment,
+    trimString
 } = require("./app.js");
 
 describe('Somke test', () => {
@@ -12,7 +14,7 @@ describe('Somke test', () => {
     });
 });
 
-describe('Test the subtract function', () => {
+describe('Test the subtract() function', () => {
     test("Subtract 2 positive numbers, where the first parameter is larger than the scond one", () => {
         let num1 = 5;
         let num2 = 1;
@@ -24,7 +26,7 @@ describe('Test the subtract function', () => {
     });
 });
 
-describe('Test the divide function', () => {
+describe('Test the divide() function', () => {
     test("Should whole numbers", () => {
         expect(divide(9,3)).toBe(3);
         expect(divide(10,5)).toBe(2);
@@ -36,4 +38,25 @@ describe('Test the isDivisibleBy() function', () => {
         expect(isDivisibleBy(14, 7)).toBeTruthy();
         expect(isDivisibleBy(21, 3)).toBe(true);
     });
+});
+
+describe("Test gradeAssignment()", () => {
+    it('should return a Pass', function () {
+        expect(gradeAssignment(41)).toBe('Pass');
+    })
+    it('should return a Merit', function () {
+        expect(gradeAssignment(65)).toBe('Merit');
+    })
+    it('should return a Distinction', function () {
+        expect(gradeAssignment(95)).toBe('Distinction');
+    })
+    it('should return a Fail', function () {
+        expect(gradeAssignment(10)).toBe('Fail');
+    })
+});
+
+describe("Test trimString()", () => {
+    it('should trim a string', function () {
+        expect(trimString("   hello       ")).toBe('hello');
+    })
 });
